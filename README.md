@@ -102,46 +102,27 @@ Todos os endpoints requerem autenticação JWT (exceto `/api/v1/auth/token/`).
 ### Filmes
 - `GET /api/v1/movies/` - Listar filmes
 - `POST /api/v1/movies/` - Criar filme
-- `GET /api/v1/movies/{id}/` - Detalhe do filme
-- `PUT /api/v1/movies/{id}/` - Atualizar filme
-- `DELETE /api/v1/movies/{id}/` - Deletar filme
+- `GET /api/v1/movies/{id}` - Detalhe do filme
+- `PUT /api/v1/movies/{id}` - Atualizar filme
+- `DELETE /api/v1/movies/{id}` - Deletar filme
 
 ### Avaliações
 - `GET /api/v1/reviews/` - Listar avaliações
 - `POST /api/v1/reviews/` - Criar avaliação
-- `GET /api/v1/reviews/{id}/` - Detalhe da avaliação
-- `PUT /api/v1/reviews/{id}/` - Atualizar avaliação
-- `DELETE /api/v1/reviews/{id}/` - Deletar avaliação
+- `GET /api/v1/reviews/{id}` - Detalhe da avaliação
+- `PUT /api/v1/reviews/{id}` - Atualizar avaliação
+- `DELETE /api/v1/reviews/{id}` - Deletar avaliação
 
 ### Gêneros
 - `GET /api/v1/genres/` - Listar gêneros
 - `POST /api/v1/genres/` - Criar gênero
-- `GET /api/v1/genres/{id}/` - Detalhe do gênero
-- `PUT /api/v1/genres/{id}/` - Atualizar gênero
-- `DELETE /api/v1/genres/{id}/` - Deletar gênero
+- `GET /api/v1/genres/{id}` - Detalhe do gênero
+- `PUT /api/v1/genres/{id}` - Atualizar gênero
+- `DELETE /api/v1/genres/{id}` - Deletar gênero
 
 ### Atores
 - `GET /api/v1/actors/` - Listar atores
 - `POST /api/v1/actors/` - Criar ator
-- `GET /api/v1/actors/{id}/` - Detalhe do ator
-- `PUT /api/v1/actors/{id}/` - Atualizar ator
-- `DELETE /api/v1/actors/{id}/` - Deletar ator
-
-## Exemplo de Uso
-
-```bash
-# 1. Obter token de autenticação
-curl -X POST http://localhost:8000/api/v1/auth/token/ \
-  -H "Content-Type: application/json" \
-  -d '{"username": "seu_usuario", "password": "sua_senha"}'
-
-# Resposta: {"access": "seu_token_jwt", "refresh": "seu_refresh_token"}
-
-# 2. Usar o token para acessar endpoints protegidos
-curl -X GET http://localhost:8000/api/v1/movies/ \
-  -H "Authorization: Bearer seu_token_jwt"
-```
-
-## Licença
-
-Este projeto está disponível como código aberto.
+- `GET /api/v1/actors/{id}` - Detalhe do ator
+- `PUT /api/v1/actors/{id}` - Atualizar ator
+- `DELETE /api/v1/actors/{id}` - Deletar ator
